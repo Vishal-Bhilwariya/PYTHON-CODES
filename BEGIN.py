@@ -1,0 +1,1 @@
+print("\nNAMSTE\nSIR\nVISHAL");

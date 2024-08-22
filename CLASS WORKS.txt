@@ -1,0 +1,322 @@
+# PYTHON 
+print("\n\n_______________________________PYTHON NOTES BY MAYANK SAXENA SIR(GLA)__________________________________")
+
+# TOPICS THAT IS DONE : 1) ALL ABOUT NUMBERS IN PYTHON
+#                       2) ALL ABOUT COMMENTS IN PYTHON
+#                       3) SOME KEYWORDS IN PYTHON
+#                       4) ALL ABOUT " BOOL " DATA TYPE
+#                       5) ASSIGNING THE VALUE INTO VARIABLES
+#                       6) OCTAL AND HEXADECIMAL REPRESENTATION IN PYTHON
+#                       7) LOGICAL OPERATORS
+#                       8) ALL ABOUT PRECEDENCE AND ASSOCITIVITY (Not complete by me)
+#                       9) ALL ABOUT PRINT FUNCTION
+#                      10) ALL ABOUT IF , ELIF AND ELSE
+#                      11) ALL ABOUT THE STRING
+
+
+print("\n................................................")
+#Note -> " ; " is used after a statement to type multiple statement in a single line
+
+a = 4
+print(a) ; print(type(a)) ; print(a/2)
+print("\n................................................")
+
+# ALL ABOUT NUMBERS IN PYTHON
+print("ALL ABOUT NUMBERS IN PYTHON")
+
+# TYPES OF NUMBER -> 1) int : anything that is not float and complex and string
+#                    2) float : anything that contains decimal values and any number in python containing E or e
+#                               ex - 23.4 , 23e2 , 23E2 etc 
+#                                    23e2 -> means 23 * 10 ^ 2 = 2300.0
+#                    3) complex : a + bj : a) here a is real & b is imaginary part
+#                                          b) a and b are of float type bocz of iota
+#                                          c) in python we use j as iota . it is predefined
+
+print("\n................................................")
+
+a = 5
+b = 3.4
+c = 23e2
+d = 3 + 4j
+
+print(type(a))  
+print(type(b))
+print(type(c))
+print(type(d))
+print(d.real)    # real part of complex number (d)
+print(type(d.real))  
+print(d.imag)    # imaginary part of complex number (d)
+print(type(d.imag))  
+
+print(".................................................\n")
+
+# ALL ABOUT COMMENTS IN PYTHON
+print("ALL ABOUT COMMENTS IN PYTHON")
+
+# -> Properties : a) It is non excutable part ( ignored by compiler or intpreter )  in code.
+#                 b) Used to make understandable the code for future or for our team members whom with we working  
+#                 c) basically a additional information about the program
+
+# Types comment ->  a) SINGLE LINE COMMENT : is done by '#'
+#                   b) MULTIPLE LINE COMMENT : is done by multiple #
+
+# Note ->  Sometime we use triple quotes ( like this ''' body ''' ) for comment the line but it is not correct method of commenting
+#          it works for us as comments bcoz it is not assigned to any variable ( space ) in right side . If assigned then it is a string.
+# example 
+
+''' HI i am Vishal 
+    I love music
+    i LOve GLA
+'''
+
+# the above three lines will work as a comments bcoz it lost in memeory as it is not assigned to any boxes and can not print it
+# we will do one change in above three lines and lets see what happened
+
+a = ''' HI i am Vishal 
+    I love music
+    i LOve GLA
+    '''
+print(a)   
+# in above code we assigned the same lines in a variable named as "a" and the it print
+print(".................................................\n")
+
+# SOME KEYWORDS IN PYTHON
+print("SOME KEYWORDS IN PYTHON")
+import keyword
+print("Total keyword = ",len(keyword.kwlist))
+print(keyword.kwlist)
+
+# Note -> when u print the keyword u will see that only True , False & None are starting with upper case and rest all with lower
+
+print(".................................................\n")
+
+# ALL ABOUT " BOOL " DATA TYPE
+print("ALL ABOUT \" BOOL \" DATA TYPE")
+# types : a) False is when 0
+#         b) Except 0 all will gives true
+
+a = 7
+b = 0.0
+c = 0.003
+d = 0
+print(bool(a))
+print(bool(b))
+print(bool(c))  
+print(bool(d)) 
+print(".................................................\n")
+
+# ASSIGNING THE VALUE INTO VARIABLES
+print("ASSIGNING THE VALUE INTO VARIABLES")
+a  = 4
+b,c,d = 23,45.0,27 + 4j
+e = 4 ; f = 4 ; g = 45.4
+print(a,b,c,d,e,f,g)
+print(".................................................\n")
+
+# OCTAL AND HEXADECIMAL REPRESENTATION IN PYTHON
+print("OCTAL AND HEXADECIMAL REPRESENTATION IN PYTHON")
+# -> Python usually(default) takes decimal value
+# -> a) In Python octal number(0 t0 7) is repersent by " 0o " in stating
+#    b) In Python hexadecimal number (0 t0 15 -> express as 0-9 and then A to F , A = 10 and so on F = 15) 
+#       is represented by " 0x " in starting.
+
+a = 0o56      # -> converting octal into decimal : 8^1 * 5 + 8^0 *6 = 46 (in decimal)
+b = 0x78      # -> converting hexadecimal into decimal : 16^1 * 7 + 16^0 * 8 =  120 (in decimal)
+print(a) ; print(b)
+print(type(a)) ; print(type(b))
+print(0x9F)   # -> 16^1 * 9 + 16^0 + 15(F) = 159
+print(".................................................\n")
+
+# LOGICAL OPERATORS
+print("LOGICAL OPERATORS")
+# Three types : 
+#    a) and -> means both condition should be give true to get true in output.If any one condition is false then output is false
+#    b) or  -> if any one condition is true then output will be true 
+#    c) not -> if condition is true then output will be false and vice versa
+
+print(10>20 and 20>10) 
+print(10>20 or 20>10)
+print(not 10>20)
+
+# some good quetions , guess the output before run
+# 1) and :
+print("\n")
+print(23 and 1087)  
+print(-89 and -872)
+print(-27 and 90.98)
+print(23 and -72.8) 
+print(0 and 20)
+
+# -> in above codes :a) intrepeter will check the first value , is it true or false , if true then check second value and print
+#                       value that value when there is no other condition is present further.
+#                    b) if first value is false , then the intrepeter will stop and will print false condition value
+#   NOTE -> Condition is true when non-zero value is present and false when value is zero(0) 
+                      
+
+# 2) or :
+print("\n")
+print( 2 or 6)
+print( 0 or 6)
+print( 0 or-67)
+print (-65 or -34)
+print(34 or 0)
+
+# -> in above codes :a) intrepeter will check the first value , is it true or false , if false then check second value and print
+#                       value that value when there is no other condition is present further.
+#                    b) if first value is true , then the intrepeter will stop and will print true condition value
+#   NOTE -> Condition is true when non-zero value is present and false when value is zero(0) 
+
+# -> MULTIPLE and & or
+print(23 and 0 or 342) # (23 and 0 ) -> 0 : now (0 or 342 ) -> 342
+print(2 and 0 or 50)  # (2 and 0 ) -> 0 : now (0 or 50 ) -> 50
+print(2 and 455 or 0)   # (2 and 455 ) -> 455 : now (455 or 0 ) -> 435 
+print(2 and 455 or 45)  # (2 and 455 ) -> 455 : now (455 or 45 ) -> 435 
+
+# 3) not :
+print(not(0)) # -> 0 is false then output is true bcoz of not
+
+# -> MULTIPLE and & or & not
+print(not(34) and 76 ) #-> 76 will be output
+print(not(0 or 34) and not(34 and 0))
+#      false and true -> false in output
+print(not(0 or 34) or not(34 and 0))
+#      false or true ->true in output
+
+
+print(".................................................\n")
+
+# ALL ABOUT PRECEDENCE AND ASSOCITIVITY
+print("ALL ABOUT PRECEDENCE AND ASSOCITIVITY")
+
+
+print(".................................................\n")
+
+# ALL ABOUT PRINT FUNCTION
+print("ALL ABOUT PRINT FUNCTION")
+# print() -> is used to display anything on output screen
+
+# Print function can take two types of arguments :
+#         a) POSITIONAL arguments : Based on position (first come first serve)
+#         b) Keywords argumnet : Based on two types :
+#                   1) sep -> used to add any character or number in between two or more strings
+#                   2) end -> used to add any character or number at the end of string
+# note -> 1) By default the sep takes blank space ( like this : sep = " ")
+#         2) By default the end takes new line ( like this : end = "\n")
+# Note -> Positional arguments should be provide before the keywords arguments otherwise it will through an error
+
+print("HI","VISHAL","SIR") # -> In this : "HI" is on first postion
+                           #              "VISHAL" is on second position
+                           #              "SIR" is on third position
+                           # they will show there output according to their positions . These all are called "POSITIONAL ARGUMNETS"
+
+
+print("HI","VISHAL","SIR") # -> 1) in this when it will print on screen we can see blank space between different strings by default
+                           # -> 2) in this when it will print on screen we can see a new line  by default ( * doubt * )
+print("HI","VISHAL","SIR",sep="@") # -> 1) in this when it will print on screen we can see '@' between different strings as sep is defined by coder
+
+print("HI","VISHAL","SIR",end = "90") # -> 1) in this when it will print on screen we can see 90 at the end of string as end is defined by coder
+
+# *
+# note -> when we use end function in print function (like this : end = "34") then the new line automaticallly terminated .so for next line should use "\n"
+# so here for new line :
+print("\n") 
+print("HI","VISHAL","SIR",end = "90",sep = "_")
+                          
+# some notables points : 1) do not use keywords argumnet before or between positional argumnets .they will through error
+#                        2) can use end before sep or vice-versa
+
+# to see what is wrong in below two lines , uncomment and then see
+#  print("HI","VISHAL",end = "90","SIR",sep = "_")
+#  print("HI","VISHAL",sep = "_","SIR",end = "90")
+
+print("\n................................................")
+
+# ALL ABOUT IF , ELIF AND ELSE
+
+#Note -> SOME RULES : 
+#    a) else is not mandatory for if but if is mandatory for else (else present without previous if throws an syntax error)
+# Types :- 1) if
+#          2) Nested if
+#          3) if else
+#          4) if elif else
+
+
+if 10>23 :
+    print("NAMSTE")
+elif 23<1 :
+    print("HELLO WORLD")    
+else :
+    print("BYE")   
+
+# Write a python script to check the number is 3 digit or not .
+#  sample test : input -> a) 324 -< true
+#                         b) -231 -< true
+#                         c) 000 -< true
+#                         d) 008 -< true
+
+num = input("Enter Your Number = ")
+
+length = len(num)  # will count lenght of input string
+negative = num.count("-") # if there is negative number present then 1 is stored in negative variable(using count function)
+                          # if not present negative number then 0  stored in negative variable 
+
+if negative == 1 :               # for negative number
+    if length == 4:
+        print(num,"is a three digit number")
+    else :
+        print(num,"is not a three digit number")
+
+else :                       # for non - negative number
+    if length == 3:
+        print(num,"is a three digit number")
+    else :
+        print(num,"is not a three digit number")
+
+print("\n................................................")
+
+# ALL ABOUT THE STRING
+
+# -> Anything that is present in between single , double or triple quotes is called "STRING"
+# -> In python there is no character data type , so anything between single quotes is consider as string
+# -> In python , for multiple line we use triple quotes 
+
+n1 = 'VISHAL BHILWARIYA'
+n2=  "VISHAL BHILWARIYA"
+n3 = """VISHAL
+      BHILWARIYA"""
+n4 = '''VISHAL
+      BHILWARIYA'''
+print(n1)
+print(n2)
+print(n3)
+print(n4)
+
+# note -> n1 and n2 , n3 and n4 will produce same output
+
+# -> String is consider as array or lists :
+#        1) whose index is started from 0 and end with n-1
+#        2) negative index (-1) is started from last character of string and move backword
+# :-> negative index is used bcoz 0 is reserved already
+
+# SLICING OF STRING
+# SYNTAX -> variable_name[start : end-1 : step]
+#      -> Default value for : a) start is 0
+#                             b) end is last index
+#                             c) step is -> 1) +1 (forward direction) for start index 0
+#                                           2) -1 (backward direction) ->>>>>doubt in negative index 
+
+name = "VISHAL BHILWARIYA SIR"
+print(name)
+
+print(name[0:5])
+print(name[4:14])
+print(name[-1:-4:-1]) #it will start print from last character and so on right to left
+print(name[-15:-4]) #-> here start index is len - 15 and ending index is len - 4
+print(name[2:14:2])
+
+
+
+
+
+
+
